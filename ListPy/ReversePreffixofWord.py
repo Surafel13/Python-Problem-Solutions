@@ -2,6 +2,9 @@ def reversePrefix(word, ch):
 
     stack = []
 
+    if not ch in word:
+        return word
+
     for i in range(len(word)):
         if word[i] != ch:
             stack.append(word[i])
@@ -15,5 +18,4 @@ def reversePrefix(word, ch):
     return "".join(stack) + wd
 
 
-
-print(reversePrefix("abcdefd", "d"))
+print(reversePrefix("abcdefd", "m"))
